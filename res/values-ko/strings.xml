@@ -13,9 +13,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="ambient_display_title">앰비언트 디스플레이</string>
+    <string name="ambient_display_title">절전 모드 자동 해제</string>
     <string name="ambient_display_notifications">새로운 알림</string>
-    <string name="ambient_display_summary">알림이 올 때 화면을 켜기</string>
+    <string name="ambient_display_summary">새 알림이 오면 화면을 켭니다</string>
     <!-- Tilt sensor -->
     <string name="tilt_sensor_title">기울기 센서</string>
     <string name="pick_up_title">휴대 전화를 들어 올려 확인</string>
@@ -34,9 +34,9 @@
     <string name="low_brightness_value">저조도 밝기</string>
     <string name="high_brightness_value">일반적인 밝기</string>
     <string name="sun_brightness_value">최대 밝기</string>
-    <string name="reset_hidden_apps">모두 재설정</string>
-    <string name="footer_info">항상 켜기가 활성화 되면 밝기가 하드웨어 사양에 따라 재계산되므로 위의 값을 절대값으로 간주하지 마십시오.</string>
+    <string name="reset_hidden_apps">모두 다시 설정</string>
+    <string name="footer_info">항상 켜기가 활성화 되면 밝기가 하드웨어 사양에 따라 재계산되므로 위의 값은 절대값이 아님에 유의하세요.</string>
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">충전시 항상 켜기</string>
-    <string name="doze_on_charge_summary">충전 시 항상 Aod 표시</string>
+    <string name="doze_on_charge_title">충전 시 항상 켜기</string>
+    <string name="doze_on_charge_summary">충전 시 절전 모드 화면을 항상 표시</string>
 </resources>
