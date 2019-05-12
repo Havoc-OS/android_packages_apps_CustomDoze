@@ -28,14 +28,14 @@ public class DozeService extends Service {
     private static final String TAG = "DozeService";
     private static final boolean DEBUG = false;
 
-    private ProximitySensor mProximitySensor;
-    private TiltSensor mTiltSensor;
+    private PocketSensor mPocketSensor;
+    private PickupSensor mPickupSensor;
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
-        mProximitySensor = new ProximitySensor(this);
-        mTiltSensor = new TiltSensor(this);
+        mPocketSensor = new PocketSensor(this);
+        mPickupSensor = new PickupSensor(this);
 
         IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
@@ -53,8 +53,8 @@ public class DozeService extends Service {
         if (DEBUG) Log.d(TAG, "Destroying service");
         super.onDestroy();
         this.unregisterReceiver(mScreenStateReceiver);
-        mProximitySensor.disable();
-        mTiltSensor.disable();
+        mPocketSensor.disable();
+        mPickupSensor.disable();
     }
 
     @Override
@@ -64,14 +64,14 @@ public class DozeService extends Service {
 
     private void onDisplayOn() {
         if (DEBUG) Log.d(TAG, "Display on");
-        mTiltSensor.disable();
-        mProximitySensor.disable();
+        mPickupSensor.disable();
+        mPocketSensor.disable();
     }
 
     private void onDisplayOff() {
         if (DEBUG) Log.d(TAG, "Display off");
-        mTiltSensor.enable();
-        mProximitySensor.enable();
+        mPickupSensor.enable();
+        mPocketSensor.enable();
     }
 
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {

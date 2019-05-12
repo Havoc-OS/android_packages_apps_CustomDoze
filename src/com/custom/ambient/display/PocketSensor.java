@@ -27,10 +27,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class ProximitySensor implements SensorEventListener {
+public class PocketSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "ProximitySensor";
+    private static final String TAG = "PocketSensor";
 
     private static final int POCKET_DELTA_NS = 1000 * 1000 * 1000;
 
@@ -46,19 +46,19 @@ public class ProximitySensor implements SensorEventListener {
 
     private final ExecutorService mExecutorService;
 
-    public ProximitySensor(Context context) {
+    public PocketSensor(Context context) {
         mContext = context;
         mSensorManager = (SensorManager)
                 mContext.getSystemService(Context.SENSOR_SERVICE);
         if (mSensorManager != null) {
-            mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+            mSensor = Utils.findSensorWithType(mSensorManager, "com.oneplus.sensor.pocket");
         }
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean isNear = event.values[0] < mSensor.getMaximumRange();
+        boolean isNear = event.values[0] == 1;
         if (mSawNear && !isNear) {
             if (shouldPulse(event.timestamp)) {
                 Utils.launchDozePulse(mContext);

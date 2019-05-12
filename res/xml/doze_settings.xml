@@ -35,7 +35,7 @@
         android:summary="@string/ambient_display_summary" />
 
     <PreferenceCategory
-        android:key="tilt_sensor"
+        android:key="pickup_sensor"
         android:title="@string/tilt_sensor_title" >
 
         <SwitchPreference

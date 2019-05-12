@@ -32,10 +32,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class TiltSensor implements SensorEventListener {
+public class PickupSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "TiltSensor";
+    private static final String TAG = "PickupSensor";
 
     private static final int SENSOR_WAKELOCK_DURATION = 200;
     private static final int BATCH_LATENCY_IN_MS = 100;
@@ -55,13 +55,13 @@ public class TiltSensor implements SensorEventListener {
 
     private final ExecutorService mExecutorService;
 
-    public TiltSensor(Context context) {
+    public PickupSensor(Context context) {
         mContext = context;
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
         if (mSensorManager != null) {
             mIsGlanceGesture = false;
-            mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
+            mSensor = Utils.findSensorWithType(mSensorManager, "com.oneplus.sensor.pickup");
             if (mSensor == null) {
                 mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GLANCE_GESTURE, true);
                 mIsGlanceGesture = true;
@@ -107,7 +107,7 @@ public class TiltSensor implements SensorEventListener {
             if (mTiltGestureEnabled) {
                 if (!mIsGlanceGesture) {
                     mSensorManager.registerListener(this, mSensor,
-                            SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000);
+                            SensorManager.SENSOR_DELAY_NORMAL);
                 } else {
                     if (!mEnabled) {
                         if (!mSensorManager.requestTriggerSensor(mGlanceListener, mSensor)) {

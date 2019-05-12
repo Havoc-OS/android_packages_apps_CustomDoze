@@ -20,12 +20,17 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.UserHandle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.hardware.AmbientDisplayConfiguration;
+
+import java.util.List;
 
 public final class Utils {
 
@@ -152,5 +157,18 @@ public final class Utils {
     protected static boolean sensorsEnabled(Context context) {
         return tiltGestureEnabled(context) || handwaveGestureEnabled(context)
                 || pocketGestureEnabled(context);
+    }
+
+    protected static Sensor findSensorWithType(SensorManager sensorManager, String type) {
+        if (TextUtils.isEmpty(type)) {
+            return null;
+        }
+        List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
+        for (Sensor s : sensorList) {
+            if (type.equals(s.getStringType())) {
+                return s;
+            }
+        }
+        return null;
     }
 }
