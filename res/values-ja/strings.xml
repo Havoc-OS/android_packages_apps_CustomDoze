@@ -36,7 +36,7 @@
     <string name="high_brightness_value">中輝度</string>
     <string name="sun_brightness_value">太陽の明るさ</string>
     <string name="reset_hidden_apps">全てリセット</string>
-    <string name="footer_info">常に有効が有効になっていると、明るさはハードウェア仕様に従うように再計算されるので、上記の値を絶対値として考慮しないで下さい。</string>
+    <string name="footer_info">常に表示が有効になっていると、明るさはハードウェア仕様に従うように再計算されるので、上記の値を絶対値として考慮しないで下さい。</string>
     <!-- Doze on charge -->
     <string name="doze_on_charge_title">充電時は常に有効</string>
     <string name="doze_on_charge_summary">充電時は常時 Doze 画面を表示する</string>
