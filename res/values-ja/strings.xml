@@ -13,30 +13,35 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="ambient_display_title">Ambient display</string>
-    <string name="ambient_display_notifications">New notifications</string>
-    <string name="ambient_display_summary">Wake screen when you receive notifications</string>
+    <string name="ambient_display_title">アンビエントディスプレイ</string>
+    <string name="ambient_display_category_triggers">表示するタイミング</string>
+    <string name="ambient_display_notifications">新しい通知</string>
+    <string name="ambient_display_summary">通知を受け取ったときに画面を起動します。</string>
     <!-- Tilt sensor -->
-    <string name="tilt_sensor_title">Tilt sensor</string>
-    <string name="pick_up_title">Lift to check phone</string>
-    <string name="pick_up_summary">Pulse notifications when device is picked up</string>
+    <string name="tilt_sensor_title">傾斜センサー</string>
+    <string name="pick_up_title">持ち上げて電話を確認します。</string>
+    <string name="pick_up_summary">デバイスを持ち上げたときに通知を表示します。</string>
     <!-- Proximity sensor -->
-    <string name="proximity_sensor_title">Proximity sensor</string>
-    <string name="hand_wave_gesture_title">Hand wave</string>
-    <string name="hand_wave_gesture_summary">Pulse notifications on hand wave</string>
-    <string name="pocket_gesture_title">Pocket</string>
-    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
-    <string name="aod_setting_title">Always on</string>
-    <string name="aod_setting_summary">Show time, notification icons and other info. Increased battery usage.</string>
-    <string name="doze_brightness_title">Ambient brightness</string>
-    <string name="doze_brightness_summary">Configure Ambient brightness values</string>
-    <string name="night_brightness_value">Night brightness</string>
-    <string name="low_brightness_value">Low light brightness</string>
-    <string name="high_brightness_value">Medium light brightness</string>
-    <string name="sun_brightness_value">Sun light brightness</string>
-    <string name="reset_hidden_apps">Reset all</string>
-    <string name="footer_info">If Always on is enabled, brightness gets recalculated to follow hardware specifications, so don\'t consider above values as absolute ones.</string>
+    <string name="proximity_sensor_title">近接センサー</string>
+    <string name="hand_wave_gesture_title">手を振る</string>
+    <string name="hand_wave_gesture_summary">手を振った時に通知を表示します。</string>
+    <string name="pocket_gesture_title">ポケット</string>
+    <string name="pocket_gesture_summary">ポケットから取り出した時に通知を表示します。</string>
+    <string name="aod_setting_title">常時オン</string>
+    <string name="aod_setting_summary">時間、通知アイコンや他の情報を表示します。バッテリー使用量が増加します。</string>
+    <string name="doze_brightness_title">周囲の明るさ</string>
+    <string name="doze_brightness_summary">周囲の明るさに応じて値を設定します。</string>
+    <string name="night_brightness_value">夜の明るさ</string>
+    <string name="low_brightness_value">低照度</string>
+    <string name="high_brightness_value">中程度の明るさ</string>
+    <string name="sun_brightness_value">太陽光の明るさ</string>
+    <string name="reset_hidden_apps">すべてリセット</string>
+    <string name="footer_info">常時オンが有効になっている場合、明るさはハードウェアの仕様に合わせて再計算されるため、上記の値を絶対値と見なさないでください。</string>
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Always on when charging</string>
-    <string name="doze_on_charge_summary">Show doze screen all the time when charging</string>
+    <string name="doze_on_charge_title">充電中は常にオン</string>
+    <string name="doze_on_charge_summary">充電中は常にDoze画面を表示します。</string>
+
+    <string name="double_tap_title">ダブルタップ</string>
+    <string name="doze_double_tap_title">ダブルタップして電話を確認します。</string>
+    <string name="doze_double_tap_summary">ダブルタップして通知を表示します。</string>
 </resources>
