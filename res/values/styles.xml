@@ -24,6 +24,8 @@
 
     <style name="PreferenceTheme" parent="@style/PreferenceThemeOverlay.SettingsBase">
         <item name="preferenceCategoryTitleTextAppearance">@style/TextAppearance.CategoryTitle</item>
+        <!-- For preference category color -->
+        <item name="preferenceCategoryTitleTextColor">?android:attr/textColorSecondary</item>
     </style>
 
     <style name="TextAppearance.CategoryTitle" parent="@*android:style/TextAppearance.DeviceDefault.Body2">
