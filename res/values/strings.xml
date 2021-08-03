@@ -24,10 +24,6 @@
     <string name="switch_on_text">On</string>
     <string name="switch_off_text">Off</string>
 
-    <!-- Battery percentage -->
-    <string name="ambient_battery_percent_title">Battery level</string> 
-    <string name="ambient_battery_percent_summary">Show battery percent on the bottom of the screen</string>
-
     <!-- Always on display -->
     <string name="aod_setting_title">Always on</string>
     <string name="aod_setting_summary">Show time, notification icons and other info</string>
