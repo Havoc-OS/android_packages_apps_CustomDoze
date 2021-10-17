@@ -74,4 +74,8 @@
     <string name="always_on_display_schedule_custom">Turns on at custom time</string>
     <string name="always_on_display_start_time_title">Start time</string>
     <string name="always_on_display_end_time_title">End time</string>
+
+    <!-- Ambient Display Swipe Gesture -->
+    <string name="ambient_swipe_title">Swipe</string>
+    <string name="ambient_swipe_summary">Allow waking the device by swiping up or down when the device is dozing</string>
 </resources>
